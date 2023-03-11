@@ -33,9 +33,9 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 5px;
-    width: 6px;
-    height: 7px;
+    right: 10px;
+    width: 12px;
+    height: 15px;
     background-image: url(./image/angles-up-solid.svg) ;
     transition: transform 0.55s;
     background-size: contain;

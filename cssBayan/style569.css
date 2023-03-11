@@ -1,17 +1,15 @@
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-}
+
 .jpeg {
-    max-width: 85%;
+    max-width: 60%;
 }
+
 .accordion {
     padding: 5px 5px;
     font-size: medium;
-    font-family: ArialBlack, Tahoma, Times-New-Roman, serif;
-    font-style: Italic;
-    color: midnightblue;
-    background: khaki;
+    font-family: cursive, Calibri;
+    font-style: normal;
+    color: indigo;
+    background: wheat;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -21,21 +19,21 @@
     display: none;
     text-align: center;
     padding: 2px 1px;
-    background-color: ghostwhite;
+    background-color: whitesmoke;
     transition: background 0.65s;
 }
 
 .accordion_lab {
     display: block;
-    font-weight: 600;
+    font-weight: 400;
     position: relative;
     cursor: pointer;
-    padding: 15px 1px;
+    padding: 15px 10px;
     transition: background 0.35s;
 }
 
 .accordion_lab:hover {
-    background: chocolate
+    background: darkkhaki;
 }
 
 .accordion_lab::after {
