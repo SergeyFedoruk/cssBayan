@@ -3,10 +3,16 @@
     max-width: 60%;
 }
 
+.jpeg:hover {
+
+    -webkit-transition: background-image 0.1s ease-in-out;
+    transition: background-image 0.1s ease-in-out;
+}
+
 .accordion {
     padding: 5px 5px;
     font-size: medium;
-    font-family: cursive, Calibri;
+    font-family: inherit, Tahoma, cursive, Calibri;
     font-style: normal;
     color: indigo;
     background: wheat;
@@ -34,6 +40,9 @@
 
 .accordion_lab:hover {
     background: darkkhaki;
+    transform: translateX(5px);
+    transition: all 0.6s ease-in-out;
+
 }
 
 .accordion_lab::after {
@@ -41,9 +50,9 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 5px;
-    width: 6px;
-    height: 7px;
+    right: 10px;
+    width: 12px;
+    height: 15px;
     background-image: url(./image/angles-up-solid.svg);
     transition: transform 0.65s;
     background-size: contain;
