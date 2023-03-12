@@ -1,0 +1,70 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+/*настройки для изображения*/
+.jpeg:nth-child(odd) {
+    max-width: 110%;
+    background: #1c87c9;
+    cursor: pointer;
+}
+
+/*настройки для accordion*/
+.accordion {
+    padding: 10px 8px;
+    font-size: small;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    background: darkgray;
+    border-radius: 10px;
+    overflow: hidden;
+}
+/*стилизация области мема*/
+.acc_cont  {
+    display: none;
+    text-align: center;
+    padding: 15px 20px;
+    background-color: ghostwhite;
+    transition: background 0.65s;
+}
+/*стилизация строки выбора с названием мема и иконкой "лычки" и "-"*/
+.accordion_lab {
+    display: block;
+    font-weight: 550;
+    position: relative;
+    cursor: pointer;
+    padding: 15px 20px;
+    transition: background 0.35s;
+}
+/*стилизация и интерактивность строки выбора с названием мема и иконкой "лычки" и "-"*/
+.accordion_lab:hover {
+    background: dimgrey;
+    transform: translateX(3px);
+    transition: all 0.7s ease-in-out;
+}
+/*позиционирование и стилизация двойной лычки выбора мема для его открытия */
+.accordion_lab::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    width: 12px;
+    height: 15px;
+    background-image: url(./image/angles-up-solid.svg);
+    transition: transform 0.55s;
+    background-size: contain;
+}
+/*не отображать кнопку выбора "радио"-меню*/
+.accordion_in {
+    display: none;
+}
+
+.accordion_in:checked ~ .acc_cont {
+    display: block;
+}
+/*задание символа "-" при открытом меме*/
+.accordion_in:checked ~ .accordion_lab::after {
+    transform: translateY(-50%);
+    background-image: url(./image/window-minimize-solid.svg);
+    transition: transform 0.5s;
+}

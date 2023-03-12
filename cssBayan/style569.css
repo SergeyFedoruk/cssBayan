@@ -1,0 +1,73 @@
+
+.jpeg {
+    max-width: 60%;
+}
+
+.jpeg:hover {
+
+    -webkit-transition: background-image 0.1s ease-in-out;
+    transition: background-image 0.1s ease-in-out;
+}
+
+.accordion {
+    padding: 5px 5px;
+    font-size: medium;
+    font-family: inherit, Tahoma, cursive, Calibri;
+    font-style: normal;
+    color: indigo;
+    background: wheat;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+.acc_cont {
+    display: none;
+    text-align: center;
+    padding: 2px 1px;
+    background-color: whitesmoke;
+    transition: background 0.65s;
+}
+
+.accordion_lab {
+    display: block;
+    font-weight: 400;
+    position: relative;
+    cursor: pointer;
+    padding: 15px 10px;
+    transition: background 0.35s;
+}
+
+.accordion_lab:hover {
+    background: darkkhaki;
+    transform: translateX(5px);
+    transition: all 0.6s ease-in-out;
+
+}
+
+.accordion_lab::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    width: 12px;
+    height: 15px;
+    background-image: url(./image/angles-up-solid.svg);
+    transition: transform 0.65s;
+    background-size: contain;
+}
+
+.accordion_in {
+    display: none;
+}
+
+.accordion_in:checked ~ .acc_cont {
+    display: block;
+}
+
+.accordion_in:checked ~ .accordion_lab::after {
+    transform: translateY(-50%);
+    background-image: url(./image/window-minimize-solid.svg);
+    transition: transform 0.6s;
+}
